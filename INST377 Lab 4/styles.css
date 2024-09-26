@@ -1,0 +1,19 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightblue;
+}
+
+.container {
+    border-width: 10px;
+    border-color: white;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+
+.section {
+    background-color: purple;
+    padding: 20px;
+    color: white;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <title>INST377 - Lab 4</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">INST377 - Lab 4</h1>
+    <div class="container">
+        <div class="section">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            <button onclick="alertMe()">Alert Me!</button>
+            <script>
+                function alertMe() {
+                    var name = document.getElementById('name').value;
+                    if (name) {
+                        alert('Hi ' + name +'!');
+                    } else {
+                        alert('Please enter a name!');
+                    }   
+                }
+            </script>
+        </div>
+        <div class="section">
+            <button onclick="changeColor()">Change Color</button>
+            <script>
+                var isBlue = true;
+                function changeColor() {
+                    document.body.style.backgroundColor = isBlue ? 'green' : 'lightblue';
+                    isBlue = !isBlue;
+                }
+            </script>
+        </div>
+        <div class="section">
+            <label for="tester">Text Tester:</label>
+            <input type="text" id="tester">
+            <button onclick="validateText()">Validate Text</button>
+            <script>     
+            function validateText() {
+                var text = document.getElementById('tester').value;
+                var validation = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+                if (validation.test(text)) {
+                    alert('How about..nah');
+                }
+            }
+            </script>
+        </div>
+        <div class="section">
+            <button id="addingtext" onclick="addText()">Add Text</button>
+            <script>
+            function addText() {
+                var heading = document.getElementById('title');
+                heading.textContent += ' Adding Text';
+            }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
